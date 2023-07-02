@@ -1,6 +1,6 @@
 # Portfolio
 
-This is a responsive portfolio website built using HTML, CSS, and JavaScript. It showcases your skills, projects, and work experience.
+This is a personal portfolio website built using HTML, CSS, and JavaScript. The website showcases my projects, skills, and contact information. The design is fully responsive and can adapt to different screen sizes, including desktop, tablet, and mobile devices.
 
 ## Table of Contents
 - [Demo](#demo)
