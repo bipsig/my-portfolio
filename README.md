@@ -10,7 +10,7 @@ This is a personal portfolio website built using HTML, CSS, and JavaScript. The 
 
 ## Demo
 
-You can check out the live demo of the portfolio [here](/).
+You can check out the live demo of the portfolio [here](https://sagnik-das-portfolio.netlify.app/).
 
 ## Features
 
