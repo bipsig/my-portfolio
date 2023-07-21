@@ -229,7 +229,11 @@ section {
 }
 .header-content .right-header p {
   margin: 1.5rem 0;
+  font-size: 1rem;
   line-height: 2rem;
+}
+.header-content .right-header p em {
+  font-size: 1.1rem;
 }
 
 /* About Content */
