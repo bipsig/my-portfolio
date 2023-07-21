@@ -173,7 +173,7 @@ section {
   pointer-events: none;
 }
 
-/* Header Content */
+/* Header Content - HERO SECTION */
 .header-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -290,14 +290,18 @@ section {
 .about-container .left-about {
   padding-right: 5rem;
 }
-.about-container .left-about p {
-  line-height: 2rem;
+.about-container .left-about h4 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.about-container .left-about div {
+  margin-bottom: 1rem;
+}
+.about-container .left-about div p {
+  line-height: 1.8rem;
   padding: 1rem;
   color: var(--color-grey-1);
-}
-.about-container .left-about h4 {
-  font-size: 2rem;
-  text-transform: uppercase;
+  font-size: 1rem;
 }
 
 /* About Stats */
@@ -340,23 +344,35 @@ section {
   transition: all 0.4s ease-in-out;
   width: 60%;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .html {
+.about-stats .progress-bars .progress-bar .progress-con .progress .cpp {
   width: 80%;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .css {
+.about-stats .progress-bars .progress-bar .progress-con .progress .c {
   width: 95%;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .js {
+.about-stats .progress-bars .progress-bar .progress-con .progress .dsa {
+  width: 85%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .html {
+  width: 90%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .css {
   width: 75%;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .react {
-  width: 60%;
+.about-stats .progress-bars .progress-bar .progress-con .progress .js {
+  width: 65%;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .node {
-  width: 87%;
+.about-stats .progress-bars .progress-bar .progress-con .progress .react {
+  width: 80%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .next {
+  width: 75%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .framework {
+  width: 80%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .python {
-  width: 70%;
+  width: 50%;
 }
 
 .stat-title {
@@ -378,18 +394,36 @@ section {
 }
 
 /* TimeLine */
-.timeline {
+.timeline-title {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 3.5rem 0;
+  position: relative;
+}
+.timeline-title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 40%;
+  height: 1px;
+  background-color: var(--color-grey-5);
+  transform: translateX(-50%);
+}
+
+.timeline-items {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
   padding-bottom: 3rem;
 }
-.timeline .timeline-item {
+.timeline-items .timeline-item {
   position: relative;
   padding-left: 3rem;
   border-left: 1px solid var(--color-grey-5);
 }
-.timeline .timeline-item .timeline-icon {
+.timeline-items .timeline-item .timeline-icon {
   position: absolute;
   left: -27px;
   top: 0;
@@ -401,10 +435,10 @@ section {
   align-items: center;
   justify-content: center;
 }
-.timeline .timeline-item .timeline-icon i {
+.timeline-items .timeline-item .timeline-icon i {
   font-size: 1.3rem;
 }
-.timeline .timeline-item .timeline-duration {
+.timeline-items .timeline-item .timeline-duration {
   padding: 0.2rem 0.6rem;
   background-color: var(--color-grey-5);
   border-radius: 15px;
@@ -413,18 +447,18 @@ section {
   text-transform: uppercase;
   font-weight: 500;
 }
-.timeline .timeline-item h5 {
+.timeline-items .timeline-item h5 {
   padding: 1rem 0;
   text-transform: uppercase;
   font-size: 1.3rem;
   font-weight: 600;
 }
-.timeline .timeline-item h5 span {
+.timeline-items .timeline-item h5 span {
   color: var(--color-grey-2);
   font-weight: 500;
   font-size: 1.2rem;
 }
-.timeline .timeline-item p {
+.timeline-items .timeline-item p {
   color: var(--color-grey-2);
 }
 

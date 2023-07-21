@@ -184,7 +184,7 @@ section {
 }
 
 
-/* Header Content */
+/* Header Content - HERO SECTION */
 
 .header-content {
     display: grid;
@@ -256,7 +256,9 @@ section {
     }
 }
 
+
 /* About Content */
+
 .about-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -317,15 +319,21 @@ section {
     .left-about {
         padding-right: 5rem;
 
-        p {
-            line-height: 2rem;
-            padding: 1rem;
-            color: var(--color-grey-1);
+        h4 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
         }
 
-        h4 {
-            font-size: 2rem;
-            text-transform: uppercase;
+        div {
+
+            margin-bottom: 1rem;
+
+            p {
+                line-height: 1.8rem;
+                padding: 1rem;
+                color: var(--color-grey-1);
+                font-size: 1rem;
+            }
         }
     }    
 }
@@ -373,28 +381,45 @@ section {
                         width: 60%;
                     }
 
+                    .cpp {
+                        width: 80%;
+                    }
+
+                    .c {
+                        width: 95%;
+                    }
+
+                    .dsa {
+                        width: 85%;
+                    }
+
                     .html { 
-                        width: 80%; 
+                        width: 90%; 
                     }
 
                     .css { 
-                        width: 95%; 
-                    }
-                    
-                    .js { 
                         width: 75%; 
                     }
                     
-                    .react{ 
-                        width: 60%; 
+                    .js { 
+                        width: 65%; 
                     }
                     
-                    .node{ 
-                        width: 87%; 
+                    .react{ 
+                        width: 80%; 
+                    }
+
+                    .next {
+                        width: 75%;
+                    }
+
+                    .framework {
+                        width: 80%;
                     }
                     
                     .python{ 
-                        width: 70%; }
+                        width: 50%; 
+                    }
                 }
             }
         }
@@ -421,7 +446,26 @@ section {
 }
 
 /* TimeLine */
-.timeline {
+.timeline-title {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 3.5rem 0;
+    position: relative;
+
+     &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 40%;
+        height: 1px;
+        background-color: var(--color-grey-5);
+        transform: translateX(-50%);
+     }
+}
+
+.timeline-items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
