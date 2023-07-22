@@ -21,7 +21,7 @@
     --color-grey-6: #12181b;
     --br-sm-2: 14px;
     --my-transition: all .4s ease-in-out;
-    --my-box-shadow: 0 3px 15px rgba (0,0,0, 0.3);
+    --my-box-shadow: 0 3px 15px rgba (0, 0, 0, 0.3);
 }
 
 .light-mode {
@@ -45,7 +45,7 @@ body {
     background-color: var(--color-primary);
     font-size: 1.1rem;
     color: var(--color-white);
-    transition: var(--my-transition); 
+    transition: var(--my-transition);
 }
 
 a {
@@ -68,7 +68,7 @@ section {
     position: absolute;
     left: 0;
     top: 0;
-     padding: 3rem 18rem;
+    padding: 3rem 18rem;
 }
 
 .section {
@@ -110,6 +110,7 @@ section {
         0% {
             transform: translateY(-100%) scaleY(0);
         }
+
         100% {
             transform: translateY(0) scaleY(1);
         }
@@ -129,7 +130,7 @@ section {
     justify-content: center;
     transform: translateY(-50%);
 
-    .control{
+    .control {
         padding: 1rem;
         cursor: pointer;
         background-color: var(--color-grey-4);
@@ -140,7 +141,7 @@ section {
         justify-content: center;
         align-items: center;
         margin: .7rem 0;
-        box-shadow: var(--box-shadow-1) ;
+        box-shadow: var(--box-shadow-1);
 
         i {
             font-size: 1.2rem;
@@ -152,7 +153,10 @@ section {
     .active-btn {
         background-color: var(--color-secondary);
         transition: all .4s ease-in-out;
-        i { color: var(--color-white); }
+
+        i {
+            color: var(--color-white);
+        }
     }
 }
 
@@ -223,7 +227,7 @@ section {
                 transition: all .4s ease-in-out;
                 filter: grayscale(100%);
 
-                &:hover{
+                &:hover {
                     filter: grayscale(0);
                 }
             }
@@ -239,8 +243,8 @@ section {
         .name {
             font-size: 3rem;
 
-            span { 
-                color: var(--color-secondary); 
+            span {
+                color: var(--color-secondary);
             }
         }
 
@@ -274,13 +278,13 @@ section {
             bottom: 1px solid var(--color-grey-5);
             border-radius: 5px;
             transition: var(--my-transition);
-            box-shadow: 1px 2px 15px rgba(0,0,0,.1);
+            box-shadow: 1px 2px 15px rgba(0, 0, 0, .1);
 
             &:hover {
                 cursor: default;
                 transform: translateY(-5px);
                 border: 1px solid var(--color-secondary);
-                box-shadow: 1px 4px 15px rgba (0,0,0,.32); 
+                box-shadow: 1px 4px 15px rgba (0, 0, 0, .32);
             }
 
             .about-text {
@@ -301,7 +305,7 @@ section {
                     font-size: 1.2rem;
                     color: var(--color-grey-1);
                     letter-spacing: 2px;
-                    
+
                     &::before {
                         content: '';
                         position: absolute;
@@ -335,7 +339,7 @@ section {
                 font-size: 1rem;
             }
         }
-    }    
+    }
 }
 
 
@@ -360,6 +364,7 @@ section {
             .progress-con {
                 display: flex;
                 align-items: center;
+
                 .prog-text {
                     color: var(--color-grey-2);
                 }
@@ -393,20 +398,20 @@ section {
                         width: 85%;
                     }
 
-                    .html { 
-                        width: 90%; 
+                    .html {
+                        width: 90%;
                     }
 
-                    .css { 
-                        width: 75%; 
+                    .css {
+                        width: 75%;
                     }
-                    
-                    .js { 
-                        width: 65%; 
+
+                    .js {
+                        width: 65%;
                     }
-                    
-                    .react{ 
-                        width: 80%; 
+
+                    .react {
+                        width: 80%;
                     }
 
                     .next {
@@ -416,9 +421,9 @@ section {
                     .framework {
                         width: 80%;
                     }
-                    
-                    .python{ 
-                        width: 50%; 
+
+                    .python {
+                        width: 50%;
                     }
                 }
             }
@@ -433,7 +438,7 @@ section {
     padding: 3.5rem 0;
     position: relative;
 
-     &::before {
+    &::before {
         content: '';
         position: absolute;
         left: 50%;
@@ -442,7 +447,7 @@ section {
         height: 1px;
         background-color: var(--color-grey-5);
         transform: translateX(-50%);
-     }
+    }
 }
 
 /* TimeLine */
@@ -453,7 +458,7 @@ section {
     padding: 3.5rem 0;
     position: relative;
 
-     &::before {
+    &::before {
         content: '';
         position: absolute;
         left: 50%;
@@ -462,7 +467,7 @@ section {
         height: 1px;
         background-color: var(--color-grey-5);
         transform: translateX(-50%);
-     }
+    }
 }
 
 .timeline-items {
@@ -515,6 +520,7 @@ section {
                 font-size: 1.2rem;
             }
         }
+
         p {
             color: var(--color-grey-2);
         }
@@ -535,82 +541,104 @@ section {
 
     .portfolio-item {
         position: relative;
-        border-radius: 15px;
 
-        img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 15px;
-        }
+        .portfolio-image {
+            position: relative;
+            border-radius: 20px;
+            border-bottom: 8px solid var(--color-secondary);
 
-        .hover-items {
-            width: 100%;
-            height: 100%;
-            background-color: var(--color-secondary);
-            position: absolute;
-            left: 0;
-            top: 0;
-            border-radius: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            opacity: 0;
-            transform: scale(0);
-            transition: var(--my-transition);
-
-            h3 {
-                font-size: 1.5rem;
-                margin-bottom: 1.5rem;
-                color: var(--color-white);
+            img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                border-radius: 15px;
+                margin: 0;
             }
 
-            .icons {
+            .hover-items {
+                width: 100%;
+                height: 100%;
+                background-color: var(--color-secondary);
+                position: absolute;
+                left: 0;
+                top: 0;
+                border-radius: 15px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                flex-direction: column;
+                opacity: 0;
+                transform: scale(0);
+                transition: var(--my-transition);
 
-                .icon {
-                    background-color: var(--color-primary);
-                    border-radius: 50%;
-                    width: 50px;
-                    height: 50px;
+                h3 {
+                    font-size: 1.5rem;
+                    margin-bottom: 1.5rem;
+                    color: var(--color-white);
+                }
+
+                .icons {
                     display: flex;
-                    align-items: center;
                     justify-content: center;
-                    margin: 0 1rem;
-                    cursor: pointer;
-                    transition: var(--my-transition);
+                    align-items: center;
 
-                    i {
-                        font-size: 1.5rem;
-                        color: var(--color-white);
+                    .icon {
+                        background-color: var(--color-primary);
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                         margin: 0 1rem;
-                    }
-
-                    &:hover {
-                        background-color: var(--color-white);
+                        cursor: pointer;
+                        transition: var(--my-transition);
 
                         i {
-                            color: var(--color-primary);
+                            font-size: 1.5rem;
+                            color: var(--color-white);
+                            margin: 0 1rem;
+                        }
+
+                        &:hover {
+                            background-color: var(--color-white);
+
+                            i {
+                                color: var(--color-primary);
+                            }
                         }
                     }
                 }
             }
+
+            &:hover .hover-items {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
-        // &:hover .hover-items {
-        //     opacity: 1;
-        //     transition: var(--my-transition);
-        //     transform: scale(1);
-        // }
-    }
-}
+        .portfolio-item-text {
+            margin-top: -7px;
+            padding: 1.1rem;
 
-.portfolio-item:hover .hover-items {
-    opacity: 1;
-    transform: scale(1);
+            h4 {
+                font-size: 1.5rem;
+                margin-bottom: 0.7rem;
+                transition: var(--my-transition);
+                cursor: pointer;
+
+                &:hover {
+                    color: var(--color-secondary);
+                }
+            }
+
+            p {
+                color: var(--color-grey-2);
+                line-height: 2rem;
+                padding-bottom: 1rem;
+            }
+        }
+    }
 }
 
 
@@ -676,18 +704,18 @@ section {
         position: relative;
         background-color: var(--color-grey-5);
         border-radius: 5px;
-        box-shadow: 1px 1px 20px rgba(0,0,0.1);
+        box-shadow: 1px 1px 20px rgba(0, 0, 0.1);
         transition: var(--my-transition);
 
         &:hover {
-            box-shadow: 1px 1px 20px rgba (0,0,0,0.3);
+            box-shadow: 1px 1px 20px rgba (0, 0, 0, 0.3);
             transform: translateY(-5px);
             transition: var(--my-transition);
 
             img {
                 filter: grayscale(0);
                 transform: scale(1.1);
-                box-shadow: 1px 4px 20px rgba(0,0,0,0.8);
+                box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.8);
             }
         }
 
@@ -750,16 +778,16 @@ section {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-        
+
                 p {
                     margin: .3rem 0 !important;
                     padding: 0 !important;
                 }
-        
+
                 .icon {
                     display: grid;
                     grid-template-columns: 40px 1fr;
-        
+
                     i {
                         display: flex;
                         align-items: center;
@@ -772,7 +800,7 @@ section {
         .contact-icon {
             display: flex;
             margin-top: 2rem;
-        
+
             a {
                 display: flex;
                 align-items: center;
@@ -785,15 +813,15 @@ section {
                 border-radius: 50%;
                 margin: 0 .4rem;
                 transition: all .4s ease-in-out;
-        
+
                 &:hover {
                     background-color: var(--color-secondary);
-        
-                    i { 
-                        color: var(--color-primary); 
+
+                    i {
+                        color: var(--color-primary);
                     }
                 }
-                
+
                 i {
                     display: flex;
                     align-items: center;
@@ -807,9 +835,12 @@ section {
     .right-contact {
         flex: 3;
         margin-left: 3rem;
+
         .input-control {
             margin: 1.5rem 0;
-            input, textarea {
+
+            input,
+            textarea {
                 border-radius: 30px;
                 font-weight: inherit;
                 font-size: inherit;
@@ -823,12 +854,15 @@ section {
                 resize: none;
             }
         }
+
         .input-control-2 {
             display: flex;
-            :last-child{
+
+            :last-child {
                 margin-left: 1.5rem;
             }
         }
+
         .submit-button {
             display: flex;
             justify-content: flex-start;
