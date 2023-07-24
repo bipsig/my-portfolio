@@ -58,8 +58,8 @@ sendMessageLink.addEventListener('click', function (event) {
 });
 
 function sendFormData() {
-
     event.preventDefault();
+    
     // Get form data
     const name = document.querySelector('input[name="name"]').value;
     const email = document.querySelector('input[name="email"]').value;
@@ -67,13 +67,14 @@ function sendFormData() {
     const message = document.querySelector('textarea[name="message"]').value;
 
     // Construct the email body with form data
-    const emailBody = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
+    const emailBody = `Message: ${message}\n\nName: ${name}\nEmail: ${email}`;
 
-    // URL encode the email body
+    // URL encode the email body and subject
     const encodedEmailBody = encodeURIComponent(emailBody);
+    const encodedSubject = encodeURIComponent(subject);
 
-    // Compose the mailto link with the recipient email and encoded email body
-    const mailtoLink = `mailto:sagnik.rik.das@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodedEmailBody}`;
+    // Compose the mailto link with the recipient email, encoded subject, and encoded email body
+    const mailtoLink = `mailto:sagnik.rik.das@gmail.com?subject=${encodedSubject}&body=${encodedEmailBody}`;
 
     // Open the user's default email client with the pre-filled form data
     window.location.href = mailtoLink;
