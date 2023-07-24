@@ -641,58 +641,6 @@ section {
     }
 }
 
-
-/* Independent Content */
-.btn-container {
-    display: flex;
-    align-items: center;
-}
-
-.main-btn {
-    border-radius: 30px;
-    color: inherit;
-    font-weight: 600;
-    position: relative;
-    border: 1px solid var(--color-secondary);
-    display: flex;
-    align-self: flex-start;
-    align-items: center;
-    overflow: hidden;
-
-    .btn-text {
-        padding: 0 2rem;
-    }
-
-    .btn-icon {
-        background-color: var(--color-secondary);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        padding: 1rem;
-    }
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translateX(100%);
-        transition: var(--my-transition);
-        z-index: -1;
-    }
-
-    &:hover {
-        &::before {
-            width: 100%;
-            height: 100%;
-            background-color: var(--color-secondary);
-            transform: translateX(0);
-            transition: var(--my-transition);
-        }
-    }
-}
-
 /* Blogs Section */
 .blogs-container {
     display: grid;
@@ -797,11 +745,14 @@ section {
             }
         }
 
+
+
         .contact-icon {
             display: flex;
             margin-top: 2rem;
 
             a {
+                position: relative;
                 display: flex;
                 align-items: center;
                 color: var(--color-white);
@@ -820,6 +771,10 @@ section {
                     i {
                         color: var(--color-primary);
                     }
+
+                    .title {
+                        opacity: 1;
+                    }
                 }
 
                 i {
@@ -828,6 +783,29 @@ section {
                     justify-content: center;
                     font-size: 1.3rem;
                 }
+
+                .icon {
+                    transition: fill 0.3s ease;
+                    /* Add a transition for smooth color change */
+                }
+
+                /* Style the SVG when dark mode is on */
+                .light-mode .icon {
+                    fill: white;
+                    /* Set the fill color to white in dark mode */
+                }
+            }
+
+            .title {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: var(--color-white);
+                font-size: 1rem;
+                text-align: center;
+                opacity: 1;
+                transition: opacity 0.3s ease;
             }
         }
     }
@@ -866,11 +844,65 @@ section {
         .submit-button {
             display: flex;
             justify-content: flex-start;
+
+            .send-email-btn {
+                margin-right: 30px;
+            }
         }
     }
 }
 
 
+/* Independent Content */
+.btn-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-btn {
+    border-radius: 30px;
+    color: inherit;
+    font-weight: 600;
+    position: relative;
+    border: 1px solid var(--color-secondary);
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    overflow: hidden;
+
+    .btn-text {
+        padding: 0 2rem;
+    }
+
+    .btn-icon {
+        background-color: var(--color-secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        padding: 1rem;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        transition: var(--my-transition);
+        z-index: -1;
+    }
+
+    &:hover {
+        &::before {
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-secondary);
+            transform: translateX(0);
+            transition: var(--my-transition);
+        }
+    }
+}
 
 
 .main-title {

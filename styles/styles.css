@@ -562,51 +562,6 @@ section {
   padding-bottom: 1rem;
 }
 
-/* Independent Content */
-.btn-container {
-  display: flex;
-  align-items: center;
-}
-
-.main-btn {
-  border-radius: 30px;
-  color: inherit;
-  font-weight: 600;
-  position: relative;
-  border: 1px solid var(--color-secondary);
-  display: flex;
-  align-self: flex-start;
-  align-items: center;
-  overflow: hidden;
-}
-.main-btn .btn-text {
-  padding: 0 2rem;
-}
-.main-btn .btn-icon {
-  background-color: var(--color-secondary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  padding: 1rem;
-}
-.main-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translateX(100%);
-  transition: var(--my-transition);
-  z-index: -1;
-}
-.main-btn:hover::before {
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-secondary);
-  transform: translateX(0);
-  transition: var(--my-transition);
-}
-
 /* Blogs Section */
 .blogs-container {
   display: grid;
@@ -701,6 +656,7 @@ section {
   margin-top: 2rem;
 }
 .contact-content-container .left-contact .contact-icon a {
+  position: relative;
   display: flex;
   align-items: center;
   color: var(--color-white);
@@ -712,6 +668,7 @@ section {
   border-radius: 50%;
   margin: 0 0.4rem;
   transition: all 0.4s ease-in-out;
+  /* Style the SVG when dark mode is on */
 }
 .contact-content-container .left-contact .contact-icon a:hover {
   background-color: var(--color-secondary);
@@ -719,11 +676,33 @@ section {
 .contact-content-container .left-contact .contact-icon a:hover i {
   color: var(--color-primary);
 }
+.contact-content-container .left-contact .contact-icon a:hover .title {
+  opacity: 1;
+}
 .contact-content-container .left-contact .contact-icon a i {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.3rem;
+}
+.contact-content-container .left-contact .contact-icon a .icon {
+  transition: fill 0.3s ease;
+  /* Add a transition for smooth color change */
+}
+.contact-content-container .left-contact .contact-icon a .light-mode .icon {
+  fill: white;
+  /* Set the fill color to white in dark mode */
+}
+.contact-content-container .left-contact .contact-icon .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-white);
+  font-size: 1rem;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 .contact-content-container .right-contact {
   flex: 3;
@@ -755,6 +734,54 @@ section {
 .contact-content-container .right-contact .submit-button {
   display: flex;
   justify-content: flex-start;
+}
+.contact-content-container .right-contact .submit-button .send-email-btn {
+  margin-right: 30px;
+}
+
+/* Independent Content */
+.btn-container {
+  display: flex;
+  align-items: center;
+}
+
+.main-btn {
+  border-radius: 30px;
+  color: inherit;
+  font-weight: 600;
+  position: relative;
+  border: 1px solid var(--color-secondary);
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+.main-btn .btn-text {
+  padding: 0 2rem;
+}
+.main-btn .btn-icon {
+  background-color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 1rem;
+}
+.main-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: var(--my-transition);
+  z-index: -1;
+}
+.main-btn:hover::before {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  transform: translateX(0);
+  transition: var(--my-transition);
 }
 
 .main-title {
